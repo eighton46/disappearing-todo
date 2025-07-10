@@ -1,0 +1,5 @@
+# 一般的な無視ファイル
+node_modules/
+*.log
+.DS_Store
+docker-compose.override.yml
