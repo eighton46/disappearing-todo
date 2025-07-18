@@ -16,7 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function createTodo(text) {
     const li = document.createElement("li");
-    li.textContent = text;
+
+    const todoText = document.createElement("div")
+    todoText.textContent = text;
+    todoText.className = "todo-text";
 
     const timerSpan = document.createElement("span");
     timerSpan.className = "timer";
@@ -25,6 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     deleteBtn.textContent = "✕";
     deleteBtn.className = "delete-btn";
 
+    li.appendChild(todoText);
     li.appendChild(timerSpan);
     li.appendChild(deleteBtn);
     list.appendChild(li);
